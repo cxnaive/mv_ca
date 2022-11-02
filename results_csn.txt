@@ -1,0 +1,25 @@
+val:
+Evaluating top_k_accuracy ...
+
+top1_acc        0.8187
+top5_acc        1.0000
+
+Evaluating mean_class_accuracy ...
+
+mean_acc        0.8098
+top1_acc: 0.8187
+top5_acc: 1.0000
+mean_class_accuracy: 0.8098
+
+train:
+Evaluating top_k_accuracy ...
+
+top1_acc        0.9707
+top5_acc        1.0000
+
+Evaluating mean_class_accuracy ...
+
+mean_acc        0.9749
+top1_acc: 0.9707
+top5_acc: 1.0000
+mean_class_accuracy: 0.9749
