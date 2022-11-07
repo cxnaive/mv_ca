@@ -23,3 +23,16 @@ mean_acc        0.9749
 top1_acc: 0.9707
 top5_acc: 1.0000
 mean_class_accuracy: 0.9749
+
+test:
+Evaluating top_k_accuracy ...
+
+top1_acc        0.8022
+top5_acc        0.9933
+
+Evaluating mean_class_accuracy ...
+
+mean_acc        0.8232
+top1_acc: 0.8022
+top5_acc: 0.9933
+mean_class_accuracy: 0.8232

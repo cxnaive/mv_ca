@@ -29,9 +29,10 @@ model = dict(
 dataset_type = 'VideoDataset'
 data_root = '/root/mv_ca/datasets/train'
 data_root_val = '/root/mv_ca/datasets/validate'
+data_root_test = '/root/mv_ca/datasets/test'
 ann_file_train = '/root/mv_ca/datasets/train_mm.txt'
 ann_file_val = '/root/mv_ca/datasets/validate_mm.txt'
-ann_file_test = '/root/mv_ca/datasets/validate_mm.txt'
+ann_file_test = '/root/mv_ca/datasets/test_mm.txt'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_bgr=False)
 train_pipeline = [
@@ -102,8 +103,8 @@ data = dict(
         pipeline=val_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=ann_file_val,
-        data_prefix=data_root_val,
+        ann_file=ann_file_test,
+        data_prefix=data_root_test,
         pipeline=test_pipeline))
 evaluation = dict(
     interval=1, metrics=['top_k_accuracy', 'mean_class_accuracy'])

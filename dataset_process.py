@@ -3,12 +3,15 @@ import cv2
 import numpy as np
 import os
 
-data_root_train = '/root/mv_ca/dataset_full/clips_v1.5'
-data_root_val = '/root/mv_ca/dataset_full/clips_v1.5'
-ann_raw_train = '/root/mv_ca/dataset_full/list_cvt/split_1/split1_train.txt'
-ann_raw_val = '/root/mv_ca/dataset_full/list_cvt/split_1/split1_test.txt'
-ann_save_train = '/root/mv_ca/dataset_full/train_mm.txt'
-ann_save_val = '/root/mv_ca/dataset_full/validate_mm.txt'
+data_root_train = '/root/mv_ca/datasets/train'
+data_root_val = '/root/mv_ca/datasets/validate'
+data_root_test = '/root/mv_ca/datasets/test'
+ann_raw_train = '/root/mv_ca/datasets/train.txt'
+ann_raw_val = '/root/mv_ca/datasets/validate.txt'
+ann_raw_test = '/root/mv_ca/datasets/test.txt'
+ann_save_train = '/root/mv_ca/datasets/train_mm.txt'
+ann_save_val = '/root/mv_ca/datasets/validate_mm.txt'
+ann_save_test = '/root/mv_ca/datasets/test_mm.txt'
 calc_states = False
 def dataset_prepare(raw_ann,save_ann,data_root):
     anns = []
@@ -55,3 +58,4 @@ def dataset_prepare(raw_ann,save_ann,data_root):
 
 dataset_prepare(ann_raw_val,ann_save_val,data_root_val)
 dataset_prepare(ann_raw_train,ann_save_train,data_root_train)
+dataset_prepare(ann_raw_test,ann_save_test,data_root_test)
